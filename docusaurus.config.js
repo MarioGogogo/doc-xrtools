@@ -48,10 +48,17 @@ const config = {
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
         },
+        // 这个插件会为你的站点创建一个站点地图
+        // 以便搜索引擎的爬虫能够更准确地爬取你的网站
+        sitemap: {
+          changefreq: 'weekly',
+          priority: 0.5,
+          ignorePatterns: ['/tags/**'],
+          filename: 'sitemap.xml',
+        },
       }),
     ],
   ],
-
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
@@ -70,12 +77,12 @@ const config = {
             position: 'left',
             label: '目录',
           },
-          { href: 'http://blog.52react.cn/', label: '博客', position: 'right' },
           {
             href: 'https://github.com/facebook/docusaurus',
             label: 'GitHub',
             position: 'left',
           },
+          { href: 'http://blog.52react.cn/', label: '博客', position: 'left' },
         ],
       },
       footer: {
@@ -114,6 +121,13 @@ const config = {
           },
         ],
         copyright: `Copyright © ${new Date().getFullYear()} 我的项目，由 Docusaurus技术支持。`,
+      },
+      algolia: {
+        // The application ID provided by Algolia
+        appId: '0VAO0P47G0',
+        // Public API key: it is safe to commit it
+        apiKey: '45c5709f9b5e936c4b32d52b9b516b2a', //Search-Only API Key
+        indexName: 'xrtools',
       },
       prism: {
         theme: lightCodeTheme,
