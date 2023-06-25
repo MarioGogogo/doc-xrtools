@@ -8,11 +8,11 @@ ENV PATH="./node_modules/.bin:$PATH"
 COPY package.json package-lock.json /code/
 # COPY package-lock.json /code/
 
-RUN npm install
 
-#adding the rest of the client code 
+RUN npm install 
 COPY . /code/
-
+RUN npm run build
+#adding the rest of the client code 
 EXPOSE 4488
 
 CMD ["npm", "run", "serve", "--", "--port", "4488"]
