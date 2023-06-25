@@ -4,26 +4,12 @@ sidebar_position: 3
 
 # 浏览器相关
 
-## 快速开始
+## urlParamToObj
 
-```js
-$ npm install--save xr-tools
-```
+解析 url 后缀转成对象类型
 
-## Create your first React Page
+```jsx
+import { urlParamToObj } from 'xrTools';
 
-Create a file at `src/pages/my-react-page.js`:
-
-```jsx title="src/pages/my-react-page.js"
-import React from 'react';
-import Layout from '@theme/Layout';
-
-export default function MyReactPage() {
-  return (
-    <Layout>
-      <h1>My React page</h1>
-      <p>This is a React page</p>
-    </Layout>
-  );
-}
+urlParamToObj(url);
 ```

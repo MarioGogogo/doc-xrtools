@@ -2,4 +2,24 @@
 sidebar_position: 5
 ---
 
-# 防抖
+# 性能
+
+## debounce
+
+防抖
+
+```jsx
+import { debounce } from 'xrTools';
+
+debounce(fn, delay);
+```
+
+## throttle
+
+节流
+
+```jsx
+import { throttle } from 'xrTools';
+
+throttle(fn, interval);
+```
