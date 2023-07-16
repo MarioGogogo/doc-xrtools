@@ -8,60 +8,59 @@ sidebar_position: 10
 
 中文字符串转拼音首字母串数组
 
-```jsx "
-import { makePY } from 'xrTools';
+### 例子
 
+```jsx "
+const str = '字符串';
 makePY(str);
+// "zfc"
 ```
 
 ## trimAll
 
 两端去空格函数
 
-```jsx "
-import { trimAll } from 'xrTools';
+### 例子
 
+```jsx "
+const str = ' xyz ';
 trimAll(str);
+//"xyz"
 ```
 
 ## generateSerialNumber
 
 随机流水号 可以带前缀
 
-```jsx "
-import { generateSerialNumber } from 'xrTools';
+### 例子
 
-generateSerialNumber(cardNum);
+```jsx "
+参数 长度
+参数 前缀
+generateSerialNumber( 16, '');
+
 ```
 
 ## filterEmoji
 
 过滤 emjio
 
-```jsx "
-import { filterEmoji } from 'xrTools';
+### 例子
 
+```jsx "
+const str = '⌚️😄哈哈我的';
 filterEmoji(str);
+//哈哈我的
 ```
 
 ## bankCardEncryption
 
 银行卡 中间部分数字用 \*\*\* 号代替
 
-```jsx "
-import { bankCardEncryption } from 'xrTools';
+### 例子
 
+```jsx "
+const cardNum = '234902030400203402034';
 bankCardEncryption(cardNum);
-```
-
-## keep2Point
-
-数字保留 2 位小数
-22 ->22.00
-3.666-> 3.6
-
-```jsx "
-import { keep2Point } from 'xrTools';
-
-keep2Point(cardNum);
+//2349***********02034
 ```
